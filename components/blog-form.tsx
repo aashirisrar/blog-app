@@ -38,6 +38,13 @@ export function TextareaForm() {
   async function onSubmit(data: z.infer<typeof FormSchema>) {
     try {
       const response = await axios.post("api/posts", data);
+
+      if (response.status === 200) {
+        form.setValue("title", "");
+        form.setValue("content", "");
+      } else {
+        console.log("Error");
+      }
     } catch (e) {
       console.log(e);
     }
@@ -53,7 +60,7 @@ export function TextareaForm() {
             <FormItem>
               <FormLabel>Blog Post Title</FormLabel>
               <FormControl>
-                <Input type="email" placeholder="Email" {...field} />
+                <Input placeholder="Title of blog post" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

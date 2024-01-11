@@ -10,11 +10,11 @@ export async function POST(req: Request) {
       return NextResponse.json({ message: "Not authenticated", status: 401 });
 
     const data = await req.json();
-    const { content } = data;
+    const { title, content } = data;
 
     const blog = await prisma.post.create({
       data: {
-        title: "New Post",
+        title,
         content,
         authorEmail: user.email,
       },
