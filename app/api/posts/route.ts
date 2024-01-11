@@ -19,7 +19,6 @@ export async function POST(req: Request) {
         authorEmail: user.email,
       },
     });
-
     return NextResponse.json({ blog }, { status: 200 });
   } catch (e) {
     return NextResponse.json({ message: "Something went wrong", status: 500 });
