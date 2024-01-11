@@ -36,6 +36,7 @@ export function TextareaForm() {
   function onSubmit(data: z.infer<typeof FormSchema>) {
     try {
         const response = axios.post('/api/posts', data)
+        console.log(response);
     } catch (e) {
         console.log(e);
     }
