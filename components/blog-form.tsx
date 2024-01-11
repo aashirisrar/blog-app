@@ -15,6 +15,7 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Textarea } from "@/components/ui/textarea"
+import axios from "axios"
 
 const FormSchema = z.object({
   bio: z
@@ -33,7 +34,11 @@ export function TextareaForm() {
   })
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    console.log(data.bio);
+    try {
+        const response = axios.post('/api/posts', data)
+    } catch (e) {
+        console.log(e);
+    }
   }
 
   return (
