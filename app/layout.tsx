@@ -6,8 +6,8 @@ import { MainNavigationMenu } from "@/components/navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Temperature Converter App",
-  description: "Convert temperatures between Celsius and Fahrenheit.",
+  title: "Blog App",
+  description: "Write awesome blogs.",
 };
 
 export default function RootLayout({
