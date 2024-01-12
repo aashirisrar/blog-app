@@ -2,6 +2,7 @@
 import { MainNavigationMenu } from "@/components/navbar";
 import Hero from "@/components/hero";
 import { TextareaForm } from "@/components/blog-form";
+import Posts from "@/components/posts";
 
 export default async function Home() {
   return (
@@ -11,6 +12,7 @@ export default async function Home() {
         <div className="container relative">
           <Hero />
           <TextareaForm />
+          <Posts />
         </div>
       </main>
     </div>
