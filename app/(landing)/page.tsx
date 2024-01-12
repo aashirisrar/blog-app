@@ -1,5 +1,11 @@
-const LandingPage = async () => {
-  return <a href="/api/auth/signin">Sign</a>;
+import Hero from "@/components/hero";
+
+const LandingPage = () => {
+  return (
+    <div>
+      <Hero />
+    </div>
+  );
 };
 
 export default LandingPage;
