@@ -52,18 +52,17 @@ export function MainNavigationMenu() {
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link href="api/auth/signin">
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Login
-                  </NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
         </nav>
         <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
           <nav className="flex items-center">
+            <a
+              href="api/auth/signin"
+              className="group w-max h-10 items-center justify-center inline-flex bg-[#D72E3B] hover:bg-[#bc2c38] transition-colors py-2 px-4 mr-2 text-white text-md font-medium rounded-[6px]"
+            >
+              Login
+            </a>
             <ModeToggle />
           </nav>
         </div>

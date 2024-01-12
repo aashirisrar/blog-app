@@ -80,7 +80,7 @@ export function TextareaForm() {
                 />
               </FormControl>
               <FormDescription>
-                You can <span>@mention</span> other users and organizations.
+                You can <span>@type</span> anything.
               </FormDescription>
               <FormMessage />
             </FormItem>
