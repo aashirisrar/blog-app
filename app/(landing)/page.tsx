@@ -1,9 +1,5 @@
-import React from 'react'
+const LandingPage = async () => {
+  return <a href="/api/auth/signin">Sign</a>;
+};
 
-const LandingPage = () => {
-  return (
-    <a href='/api/auth/signin'>LandingPage</a>
-  )
-}
-
-export default LandingPage
+export default LandingPage;
