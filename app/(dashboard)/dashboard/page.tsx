@@ -3,6 +3,7 @@ import { MainNavigationMenu } from "@/components/navbar";
 import Hero from "@/components/hero";
 import { TextareaForm } from "@/components/blog-form";
 import Posts from "@/components/posts";
+import { SearchPost } from "@/components/blog-search";
 
 export default async function Home() {
   return (
@@ -13,6 +14,7 @@ export default async function Home() {
           <Hero />
           <TextareaForm />
           <Posts />
+          <SearchPost />
         </div>
       </main>
     </div>
