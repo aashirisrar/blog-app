@@ -63,7 +63,7 @@ export function SearchPost() {
         <div>
           {blogss.length ? (
             blogss.map((blog: any) => (
-              <div className="p-2">
+              <div className="p-2" key={blog.content}>
                 <div>Content:{blog.content}</div>
                 <div>Author:{blog.authorEmail}</div>
               </div>
