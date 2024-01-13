@@ -16,7 +16,7 @@ const Posts = () => {
   return (
     <div>
       <div>
-        {blogss.length ? (
+        {blogss.length !== 0 ? (
           blogss.map((blog: any) => (
             <div className="p-2">
               <div>Title: {blog.title}</div>

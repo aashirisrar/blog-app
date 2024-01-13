@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="mx-auto flex max-w-[980px] flex-col items-center gap-2 py-8 md:py-12 md:pb-8 lg:py-24 lg:pb-20">
+    <section className="mx-auto flex max-w-[980px] flex-col items-center gap-6 py-8 md:py-12 md:pb-8 lg:py-24 lg:pb-20">
       <a
         className="inline-flex items-center rounded-lg bg-muted px-3 py-1 text-sm font-medium"
         href="/docs/changelog"
@@ -13,9 +13,9 @@ const Hero = () => {
           role="none"
           className="shrink-0 bg-border w-[1px] mx-2 h-4"
         ></div>{" "}
-        <span className="sm:hidden">New components and more.</span>
+        <span className="sm:hidden">New blogging expreience.</span>
         <span className="hidden sm:inline">
-          New components, cli updates and more.
+          New blogging expreience and more.
         </span>
         <svg
           width="15"
@@ -34,7 +34,7 @@ const Hero = () => {
         </svg>
       </a>
       <h1 className="text-center text-3xl font-bold leading-tight tracking-tighter md:text-6xl lg:leading-[1.1] hidden md:block">
-        Check out some examples
+        The best blogging app
       </h1>
       <span
         className="max-w-[750px] text-center text-lg text-muted-foreground sm:text-xl"
@@ -47,21 +47,21 @@ const Hero = () => {
           maxWidth: 560,
         }}
       >
-        Dashboard, cards, authentication. Some examples built using the
-        components. Use this as a guide to build your own.
+        Blog about anything you want. Share your thoughts, experiences, and
+        more.
       </span>
       <div className="flex w-full items-center justify-center space-x-4 py-4 md:pb-10">
         <a
           className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2 rounded-[6px]"
-          href="/docs"
+          href="api/auth/signin"
         >
           Get Started
         </a>
         <a
           className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2 rounded-[6px]"
-          href="/components"
+          href="/posts"
         >
-          Components
+          View Blogs
         </a>
       </div>
     </section>
