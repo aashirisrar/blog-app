@@ -18,7 +18,6 @@ import { Textarea } from "@/components/ui/textarea";
 import axios from "axios";
 import { Input } from "./ui/input";
 import { useState } from "react";
-import { AnyARecord } from "dns";
 
 const FormSchema = z.object({
   title: z.string(),
@@ -41,22 +40,22 @@ export function TextareaForm() {
   const [clicked, setClicked] = useState(false);
 
   async function onSubmit(data: z.infer<typeof FormSchema>) {
-    setClicked(true);
     try {
       const response = await axios.post("api/posts", data);
 
-      if (response.data.status === 401) {
-        setAuthorized(false);
-      } else if (response.data.status === 200) {
+      if (response.status === 200) {
         setAuthorized(true);
         form.setValue("title", "");
         form.setValue("content", "");
+      } else if (response.status === 401) {
+        setAuthorized(false);
       } else {
         console.log(response.data.message);
       }
     } catch (e) {
       console.log(e);
     }
+    setClicked(true);
   }
 
   return (
@@ -97,7 +96,13 @@ export function TextareaForm() {
         />
         <Button type="submit">Submit</Button>
       </form>
-      {!authorized && clicked ? <div>You are not authorized</div> : <></>}
+      {!authorized && clicked ? (
+        <div className="mt-2">
+          You are not logged in to post. First log in and then try again.
+        </div>
+      ) : (
+        <></>
+      )}
     </Form>
   );
 }

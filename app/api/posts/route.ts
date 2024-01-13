@@ -7,7 +7,10 @@ export async function POST(req: Request) {
 
   try {
     if (!user?.email)
-      return NextResponse.json({ message: "Not authenticated", status: 401 });
+      return NextResponse.json(
+        { message: "Not authenticated" },
+        { status: 401 }
+      );
 
     const data = await req.json();
     const { title, content } = data;
@@ -21,6 +24,9 @@ export async function POST(req: Request) {
     });
     return NextResponse.json({ blog }, { status: 200 });
   } catch (e) {
-    return NextResponse.json({ message: "Something went wrong", status: 500 });
+    return NextResponse.json(
+      { message: "Something went wrong" },
+      { status: 500 }
+    );
   }
 }
