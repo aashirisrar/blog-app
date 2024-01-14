@@ -14,20 +14,18 @@ const Posts = () => {
   }, []);
 
   return (
-    <div>
-      <div>
-        {blogss.length !== 0 ? (
-          blogss.map((blog: any) => (
-            <div className="p-2" key={blog.title}>
-              <div>Title: {blog.title}</div>
-              <div>Content: {blog.content}</div>
-              <div>Author: {blog.authorEmail}</div>
-            </div>
-          ))
-        ) : (
-          <></>
-        )}
-      </div>
+    <div className="w-1/2">
+      {blogss.length !== 0 ? (
+        blogss.map((blog: any) => (
+          <div className="p-2" key={blog.title}>
+            <div>Title: {blog.title}</div>
+            <div>Content: {blog.content}</div>
+            <div>Author: {blog.authorEmail}</div>
+          </div>
+        ))
+      ) : (
+        <></>
+      )}
     </div>
   );
 };
